@@ -2,12 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Currensees</id>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <authors>Finbarrs Oketunji</authors>
     <owners>Moat Systems Limited</owners>
     <license type="expression">BSD 3-Clause</license>
     <projectUrl>https://github.com/moatsystems/currensees-csharp</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/moatsystems/currensees-csharp/main/src/currensees/icon.png</iconUrl>
+    <icon>src/currensees/icon.png</icon>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The Currency API client for the .NET platform.</description>
     <releaseNotes>

@@ -24,7 +24,7 @@ cd MyCurrencyApp
 Add the `Currensees` package from NuGet:
 
 ```shell
-dotnet add package Currensees --version 0.1.0
+dotnet add package Currensees --version 0.1.2
 ```
 
 Create a file called `Program.cs` in the MyCurrencyApp project with the following code:
@@ -118,6 +118,21 @@ namespace MyCurrencyApp
                 else
                 {
                     Console.WriteLine("Weekly average failed");
+                }
+
+                // Instantiate the MonthlyAverage class with the authenticated Auth instance
+                var monthlyAverage = new MonthlyAverage(auth);
+
+                // Get monthly average for the specified date range
+                string monthlyAverageResult = await monthlyAverage.GetMonthlyAverage(2023, 04);
+
+                if (monthlyAverageResult != null)
+                {
+                    Console.WriteLine($"Monthly average result: {monthlyAverageResult}");
+                }
+                else
+                {
+                    Console.WriteLine("Monthly average failed");
                 }
 
                 // Instantiate the Currencies class with the authenticated Auth instance
