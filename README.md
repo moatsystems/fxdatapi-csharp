@@ -24,7 +24,7 @@ cd MyCurrencyApp
 Add the `Fxdatapi` package from NuGet:
 
 ```shell
-dotnet add package Fxdatapi --version 0.1.2
+dotnet add package Fxdatapi --version 0.1.3
 ```
 
 Create a file called `Program.cs` in the MyCurrencyApp project with the following code:
