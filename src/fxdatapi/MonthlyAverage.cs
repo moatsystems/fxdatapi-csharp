@@ -1,38 +1,28 @@
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Currensees
+namespace Fxdatapi
 {
-    public class ConvertAll
+    public class MonthlyAverage
     {
-        private const string ConvertAllUrl = "https://currensees.com/v1/convert_all";
+        private const string MonthlyAverageUrl = "https://fxdatapi.com/v1/monthly_average/";
         private static readonly HttpClient Client = new HttpClient();
         private readonly Auth _auth;
 
-        public ConvertAll(Auth auth)
+        public MonthlyAverage(Auth auth)
         {
             _auth = auth;
         }
 
-        public async Task<string> ConvertCurrencyAll(string username, string date, string baseCurrency, string amount)
+        public async Task<string> GetMonthlyAverage(int year, int month)
         {
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             Client.DefaultRequestHeaders.Add("Cookie", _auth.Cookie);
 
-            var requestData = new
-            {
-                username = username,
-                date = date,
-                base_currency = baseCurrency,
-                amount = amount
-            };
-            var jsonContent = new StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
-
-            var response = await Client.PostAsync(ConvertAllUrl, jsonContent);
+            var response = await Client.GetAsync($"{MonthlyAverageUrl}{year}/{month}");
 
             if (response.IsSuccessStatusCode)
             {

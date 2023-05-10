@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Currensees
+namespace Fxdatapi
 {
     public class Convert
     {
-        private const string ConvertUrl = "https://currensees.com/v1/convert";
+        private const string ConvertUrl = "https://fxdatapi.com/v1/convert";
         private static readonly HttpClient Client = new HttpClient();
         private readonly Auth _auth;
 

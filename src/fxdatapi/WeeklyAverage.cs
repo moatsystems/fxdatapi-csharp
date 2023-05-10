@@ -4,25 +4,25 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Currensees
+namespace Fxdatapi
 {
-    public class MonthlyAverage
+    public class WeeklyAverage
     {
-        private const string MonthlyAverageUrl = "https://currensees.com/v1/monthly_average/";
+        private const string WeeklyAverageUrl = "https://fxdatapi.com/v1/weekly_average/";
         private static readonly HttpClient Client = new HttpClient();
         private readonly Auth _auth;
 
-        public MonthlyAverage(Auth auth)
+        public WeeklyAverage(Auth auth)
         {
             _auth = auth;
         }
 
-        public async Task<string> GetMonthlyAverage(int year, int month)
+        public async Task<string> GetWeeklyAverage(string fromDate, string toDate)
         {
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             Client.DefaultRequestHeaders.Add("Cookie", _auth.Cookie);
 
-            var response = await Client.GetAsync($"{MonthlyAverageUrl}{year}/{month}");
+            var response = await Client.GetAsync($"{WeeklyAverageUrl}{fromDate}/{toDate}");
 
             if (response.IsSuccessStatusCode)
             {

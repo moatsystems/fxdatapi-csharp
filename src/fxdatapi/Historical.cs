@@ -4,11 +4,11 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Currensees
+namespace Fxdatapi
 {
     public class Historical
     {
-        private const string HistoricalUrl = "https://currensees.com/v1/historical";
+        private const string HistoricalUrl = "https://fxdatapi.com/v1/historical";
         private static readonly HttpClient Client = new HttpClient();
         private readonly Auth _auth;
 

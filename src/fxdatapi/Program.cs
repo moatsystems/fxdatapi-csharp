@@ -1,48 +1,15 @@
-## Currency API C# Client
-
-[![Build Status](https://github.com/moatsystems/fxdatapi-csharp/actions/workflows/ci.yml/badge.svg)](https://github.com/moatsystems/fxdatapi-csharp/actions/workflows/ci.yml)
-[![NuGet version](https://badge.fury.io/nu/fxdatapi.svg)](https://badge.fury.io/nu/fxdatapi)
-
-The [Currency API](https://moatsystems.com/currency-api/) client for the .NET platform.
-
-### Usage Example
-
-Here's a simple example of using the installed version of the Fxdatapi package.
-
-First, create a new .NET Console Application:
-
-```shell
-dotnet new console -n MyCurrencyApp
-```
-
-Change into the newly created directory:
-
-```shell
-cd MyCurrencyApp
-```
-
-Add the `Fxdatapi` package from NuGet:
-
-```shell
-dotnet add package Fxdatapi --version 0.1.2
-```
-
-Create a file called `Program.cs` in the MyCurrencyApp project with the following code:
-
-```c#
 using System;
 using System.Threading.Tasks;
-using Fxdatapi;
 
-namespace MyCurrencyApp
+namespace Fxdatapi
 {
     class Program
     {
         static async Task Main(string[] args)
         {
             // Replace with your own credentials
-            string username = "your_username"; // update with the username you receive after subscription
-            string password = "your_password"; // update with the password you receive after subscription
+            string username = "your_username";
+            string password = "your_password";
 
             // Instantiate the Auth class
             var auth = new Auth();
@@ -249,28 +216,3 @@ namespace MyCurrencyApp
         }
     }
 }
-```
-
-Execute the code above by running:
-
-```shell
-dotnet run
-```
-
-You should see the output displaying data if the authentication is successful. 😎 🚀
-
-### Setting up Currency API Account
-
-Subscribe [here](https://moatsystems.com/currency-api/) for a user account.
-
-### Using the Currency API
-
-You can read the [API documentation](https://docs.fxdatapi.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://moatsystems.com/contact/).
-
-### License
-
-This project is licensed under the [BSD 3-Clause License](./LICENSE).
-
-### Copyright
-
-(c) 2020 - 2023 [Moat Systems Limited](https://moatsystems.com).

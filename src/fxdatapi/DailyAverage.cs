@@ -4,11 +4,11 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Currensees
+namespace Fxdatapi
 {
     public class DailyAverage
     {
-        private const string DailyAverageUrl = "https://currensees.com/v1/daily_average/";
+        private const string DailyAverageUrl = "https://fxdatapi.com/v1/daily_average/";
         private static readonly HttpClient Client = new HttpClient();
         private readonly Auth _auth;
 

@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Currensees
+namespace Fxdatapi
 {
     public class MarginsSpreads
     {
@@ -19,7 +19,7 @@ namespace Currensees
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://currensees.com/");
+                client.BaseAddress = new Uri("https://fxdatapi.com/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -43,7 +43,7 @@ namespace Currensees
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://currensees.com/");
+                client.BaseAddress = new Uri("https://fxdatapi.com/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 

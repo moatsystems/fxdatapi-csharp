@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Currensees
+namespace Fxdatapi
 {
     public class Auth
     {
-        private const string LoginUrl = "https://currensees.com/v1/login";
+        private const string LoginUrl = "https://fxdatapi.com/v1/login";
         private static readonly HttpClient Client = new HttpClient();
         public string Cookie { get; private set; }
 

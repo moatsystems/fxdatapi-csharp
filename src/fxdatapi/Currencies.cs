@@ -4,11 +4,11 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Currensees
+namespace Fxdatapi
 {
     public class Currencies
     {
-        private const string CurrenciesUrl = "https://currensees.com/v1/currencies";
+        private const string CurrenciesUrl = "https://fxdatapi.com/v1/currencies";
         private static readonly HttpClient Client = new HttpClient();
         private readonly Auth _auth;
 
